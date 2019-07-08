@@ -83,17 +83,6 @@ def run(args):
         wndMethod, wnd = myFeaExt.windowSet(windowMethod, frameSize[-1])
         windowParam.append({'method': wndMethod, 'window': wnd})
         feaParamDic = {}
-        # --- FFT param
-        try:
-            feaParamDic['pad'] = config.getboolean('feature', 'pad')
-        except Exception as e:
-            feaParamDic['pad'] = 0
-        # --- MEL param
-        feaParamDic['numMel'] = config.getint('feature', 'nummel')
-        try:
-            feaParamDic['melUseLog'] = config.getint('feature', 'meluselog')
-        except Exception as e:
-            feaParamDic['melUseLog'] = 1
         # --- MFCC param
         try:
             feaParamDic['numMfcc'] = config.getint('feature', 'nummfcc')
