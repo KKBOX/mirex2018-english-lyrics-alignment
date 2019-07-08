@@ -7,7 +7,8 @@ This repository shows our submissions (CW2 and CW3) for subtask 2 of lyrics alig
 * HTK and ffmpeg
   * Set the $PATH enviroment variable if needed
 * Python 3.6 and libraries in requirements.txt
-* Download models and example data from [here](...)
+* Download models and example data from [here](https://drive.google.com/drive/folders/1EKdsSoiFI0Zg1KMe7nnpApBnGfG_zrKB)
+  * Example data came from the Mauch dataset
 
 ## Usage
 
