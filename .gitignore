@@ -1,0 +1,16 @@
+.DS_Store
+
+*.txt
+!requirements.txt
+
+*.npy
+*.pyc
+*.mp3
+
+# HTK related files
+*.dic
+*.model
+*.cfg
+macro.*
+
+vnv_model
