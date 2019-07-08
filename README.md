@@ -1,9 +1,13 @@
 # MIREX2018 English Lyrics Alignment
 
-This repository shows
+This repository shows our submissions (CW2 and CW3) for subtask 2 of lyrics alignment of MIREX2018
 
-## Installation
+## Installation and Requirements
 
+* HTK and ffmpeg
+  * Set the $PATH enviroment variable if needed
+* Python 3.6 and libraries in requirements.txt
+* Download models and example data from [here](...)
 
 ## Usage
 

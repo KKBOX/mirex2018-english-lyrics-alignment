@@ -64,7 +64,7 @@ def wavToFea(inputFileName, targetFs, frameSize, hopSize, windowParam, featype, 
         mfcc_e = python_speech_features.base.mfcc(
             y, samplerate=targetFs, numcep=feaParam['numMfcc'],
             winlen=1.0*frameSize/targetFs, winstep=1.0*hopSize/targetFs,
-            nfft=frameSize)
+            nfft=frameSize, winfunc=np.hamming)
         mfcc_e_d = python_speech_features.base.delta(mfcc_e, 1)
         mfcc_e_a = python_speech_features.base.delta(mfcc_e_d, 1)
         fea = np.hstack([mfcc_e, mfcc_e_d, mfcc_e_a]).T

@@ -19,6 +19,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('input_audio', help='')
 parser.add_argument('input_txt', help='')
 parser.add_argument('output', help='')
+parser.add_argument('--model_dir', default='model_CW3')
 args = parser.parse_args()
 
 if sys.version_info.major != 3:
@@ -47,10 +48,10 @@ tmp_dic_file = os.path.join(tmp_dir, 'tmp.dic')
 tmp_vnv_txt = os.path.join(tmp_dir, 'tmp.vnv.txt')
 tmp_vnv_wav = os.path.join(tmp_dir, 'tmp.vnv.wav')
 
-cfg_file = 'htk_dict_and_data/mfcc39.edaz.cfg'
-dic_file = 'htk_dict_and_data/eng.biphone.dic'
-model_file = 'htk_dict_and_data/ly_west_7300.model'
-macro_file = 'htk_macro/macro.ly_west_seg_7300.bi.24.final'
+cfg_file = os.path.join(args.model_dir, 'mfcc39.edaz.cfg')
+dic_file = os.path.join(args.model_dir, 'dic.dic')
+model_file = os.path.join(args.model_dir, 'model_list.model')
+macro_file = os.path.join(args.model_dir, 'macro.final')
 
 # Read dict
 try:
@@ -155,7 +156,7 @@ try:
     cnt = loadFile(tmp_out_file)[3:][:-2]  # Eliminate fixed sil in the beginning and end
     word_align = [c.split(' ')[:-1] for c in cnt]
 except Exception as e:
-    raise('Reading tmp_out_file error')
+    raise Exception('Reading tmp_out_file error')
 
 if do_vnv:
     for wa in word_align:
