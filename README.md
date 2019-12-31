@@ -14,30 +14,30 @@ This repository shows our submissions (CW2 and CW3) for subtask 2 of lyrics alig
 * Clong this repo:
 
   ```bash
-git clone git@github.com:KKBOX/mirex2018-english-lyrics-alignment.git
-git lfs install
-git lfs pull
-```
+  git clone git@github.com:KKBOX/mirex2018-english-lyrics-alignment.git
+  git lfs install
+  git lfs pull
+  ```
 
 * Setup Python virtual environment and install dependences:
 
   ```bash
-virtualenv -p python3 venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
+  virtualenv -p python3 venv
+  source venv/bin/activate
+  pip install -r requirements.txt
+  ```
 
 * Calling format:
 
   ```bash
-python3 go.py %input_audio %input_txt %output_txt
-```
+  python3 go.py %input_audio %input_txt %output_txt
+  ```
 
   * Example:
 
       ```bash
-python3 go.py example_data/Muse.GuidingLight.mp3 example_data/Muse.GuidingLight.txt output.txt
-```
+      python3 go.py example_data/Muse.GuidingLight.mp3 example_data/Muse.GuidingLight.txt output.txt
+      ```
 
   * To switch between CW2 and CW3, add `--model_dir model_CW2` or `--model_dir model_CW3` respectively. The default is model\_CW3.
 
