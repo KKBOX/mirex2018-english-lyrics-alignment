@@ -1,0 +1,10 @@
+.DS_Store
+venv/
+tmp_*/
+
+*.txt
+!requirements.txt
+!example_data/*.txt
+
+*.pyc
+
